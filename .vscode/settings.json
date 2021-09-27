@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/.git": false
+    },
+    "eslint.validate": [
+        "cds",
+        "csn"
+    ],
+    "eslint.runtime": "node",
+    "eslint.nodePath": "/usr/lib/node_modules/@sap/cds-dk/node_modules",
+    "eslint.options": {
+        "configFile": "/usr/lib/node_modules/@sap/cds-dk/lib/lint/.eslintrc.js"
+    }
+}
