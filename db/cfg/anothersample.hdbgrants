@@ -1,0 +1,14 @@
+{
+    "anothersample-db": {
+        "object_owner": {
+            "schema_roles": [
+                "external_access_g#"
+            ]
+        },
+        "application_user": {
+            "schema_roles": [
+                "external_access"
+            ]
+        }
+    }
+}

@@ -42,6 +42,14 @@ modules:
    requires:
     # 'hana' and 'xsuaa' resources extracted from CAP configuration
     - name: littlecap-db
+      properties:
+        TARGET_CONTAINER: ~{hdi-service-name}
+      parameters:
+        keep-existing: null
+        env: true
+        service-bindings: true
+        routes: true
+    - name: anothersample-db
 
 
 resources:
@@ -58,5 +66,7 @@ resources:
         schema: littlecap
    properties:
      hdi-service-name: ${service-name}
+ - name: anothersample-db
+   type: org.cloudfoundry.existing-service
 
 
