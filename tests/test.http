@@ -1,0 +1,2 @@
+POST http://localhost:4004/sample/callStoredProc
+content-type: application/json

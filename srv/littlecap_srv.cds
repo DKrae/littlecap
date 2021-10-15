@@ -1,7 +1,7 @@
-using Sample2 from '../db/schema';
+using { Sample2, SAMPLE } from '../db/schema';
 
 service sampleService {
-
-    @readonly entity Sample as projection on Sample2;
-
+    @readonly entity Sample as projection on SAMPLE;
+    @readonly entity SampleLC as projection on Sample2;
+    action callStoredProc() returns array of Sample;
 }

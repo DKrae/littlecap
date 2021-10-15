@@ -1,0 +1,14 @@
+{
+    "SAMPLEPROC": {
+        "target": {
+            "object": "SAMPLEPROC",
+            "schema.configure": "anothersample-db/schema"
+        }
+    },
+    "SAMPLE": {
+        "target": {
+            "object": "SAMPLE",
+            "schema.configure": "anothersample-db/schema"
+        }
+    }
+}

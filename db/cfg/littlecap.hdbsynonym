@@ -1,0 +1,14 @@
+{
+    "SAMPLEPROC": {
+        "target": {
+            "object": "SAMPLEPROC",
+            "schema": "ANOTHERSAMPLE"
+        }
+    },
+    "SAMPLE": {
+        "target": {
+            "object": "SAMPLE",
+            "schema": "ANOTHERSAMPLE"
+        }
+    }
+}
