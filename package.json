@@ -10,6 +10,7 @@
         "@sap/hana-client": "^2.10.13",
         "@sap/hdbext": "^7.3.1",
         "@sap/hdi-deploy": "^4.2.0",
+        "@sap/xsenv": "^3.1.1",
         "express": "^4",
         "hdb": "^0.18.3",
         "sap-hdbext-promisfied": "^2.202108.3"

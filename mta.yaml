@@ -27,6 +27,7 @@ modules:
    requires:
     # Resources extracted from CAP configuration
     - name: littlecap-db
+    - name: sampleups
    provides:
     - name: srv-api      # required by consumers of CAP services (e.g. approuter)
       properties:
@@ -68,5 +69,9 @@ resources:
      hdi-service-name: ${service-name}
  - name: anothersample-db
    type: org.cloudfoundry.existing-service
+ - name: sampleups
+   type: org.cloudfoundry.user-provided-service
+   parameters:
+     path: ./sampleups.json
 
 
