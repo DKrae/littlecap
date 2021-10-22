@@ -1,0 +1,14 @@
+//@ui5-bundle sapleui5/Component-preload.js
+jQuery.sap.registerPreloadedModules({
+"version":"2.0",
+"modules":{
+	"sapleui5/Component.js":function(){sap.ui.define(["sap/ui/core/UIComponent","sap/ui/Device","sapleui5/model/models"],function(e,i,t){"use strict";return e.extend("sapleui5.Component",{metadata:{manifest:"json"},init:function(){e.prototype.init.apply(this,arguments);this.getRouter().initialize();this.setModel(t.createDeviceModel(),"device")}})});
+},
+	"sapleui5/controller/SampleView.controller.js":function(){sap.ui.define(["sap/ui/core/mvc/Controller"],function(e){"use strict";return e.extend("sapleui5.controller.SampleView",{onInit:function(){}})});
+},
+	"sapleui5/i18n/i18n.properties":'title=Title\nappTitle=SampleView\nappDescription=App Description\n',
+	"sapleui5/manifest.json":'{"_version":"1.32.0","sap.app":{"id":"sapleui5","type":"application","i18n":"i18n/i18n.properties","applicationVersion":{"version":"1.0.0"},"title":"{{appTitle}}","description":"{{appDescription}}","resources":"resources.json","ach":"ach","dataSources":{"mainService":{"uri":"sample/","type":"OData","settings":{"odataVersion":"2.0","localUri":"localService/metadata.xml"}}}},"sap.ui":{"technology":"UI5","icons":{"icon":"sap-icon://task","favIcon":"","phone":"","phone@2":"","tablet":"","tablet@2":""},"deviceTypes":{"desktop":true,"tablet":true,"phone":true}},"sap.ui5":{"flexEnabled":false,"rootView":{"viewName":"sapleui5.view.SampleView","type":"XML","async":true,"id":"SampleView"},"dependencies":{"minUI5Version":"1.95.0","libs":{"sap.ui.core":{},"sap.m":{},"sap.ui.layout":{},"sap.f":{}}},"contentDensities":{"compact":true,"cozy":true},"models":{"i18n":{"type":"sap.ui.model.resource.ResourceModel","settings":{"bundleName":"sapleui5.i18n.i18n"}},"":{"dataSource":"mainService","preload":true}},"resources":{"css":[{"uri":"css/style.css"}]},"routing":{"config":{"routerClass":"sap.m.routing.Router","viewType":"XML","async":true,"viewPath":"sapleui5.view","controlAggregation":"pages","controlId":"app","clearControlAggregation":false},"routes":[{"name":"RouteSampleView","pattern":"RouteSampleView","target":["TargetSampleView"]}],"targets":{"TargetSampleView":{"viewType":"XML","transition":"slide","clearControlAggregation":false,"viewId":"SampleView","viewName":"SampleView"}}}}}',
+	"sapleui5/model/models.js":function(){sap.ui.define(["sap/ui/model/json/JSONModel","sap/ui/Device"],function(e,n){"use strict";return{createDeviceModel:function(){var i=new e(n);i.setDefaultBindingMode("OneWay");return i}}});
+},
+	"sapleui5/view/SampleView.view.xml":'<mvc:View\n    controllerName="sapleui5.controller.SampleView"\n    xmlns:mvc="sap.ui.core.mvc"\n    displayBlock="true"\n    xmlns="sap.m"\n><Shell id="shell"><App id="app"><pages><Page id="page" title="{i18n>title}"><content /></Page></pages></App></Shell></mvc:View>\n'
+}});

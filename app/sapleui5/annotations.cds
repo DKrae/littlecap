@@ -1,0 +1,1 @@
+using sampleService as service from '../../srv/littlecap_srv';
