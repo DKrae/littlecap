@@ -7,7 +7,8 @@ module.exports = async function() {
         try {
             const xsenv = require('@sap/xsenv');
             const dbClass = require("sap-hdbext-promisfied");
-            let dbConn = new dbClass(await dbClass.createConnection(xsenv.readServices().sampleups.credentials));
+            let dbConn = new dbClass(await dbClass.createConnection(xsenv.readServices()["anothersample-db"].credentials));
+            //let dbConn = new dbClass(await dbClass.createConnection(xsenv.readServices()["anothersample-db"].credentials));
             const hdbext = require("@sap/hdbext");
             const sp = await dbConn.loadProcedurePromisified(hdbext, null, 'SAMPLEPROC');
             const output = await dbConn.callProcedurePromisified(sp, []);
@@ -16,6 +17,18 @@ module.exports = async function() {
             console.error(error)
             return {}
         }
+        // try {
+        //     const xsenv = require('@sap/xsenv');
+        //     const dbClass = require("sap-hdbext-promisfied");
+        //     let dbConn = new dbClass(await dbClass.createConnection(xsenv.readServices().sampleups.credentials));
+        //     const hdbext = require("@sap/hdbext");
+        //     const sp = await dbConn.loadProcedurePromisified(hdbext, null, 'SAMPLEPROC');
+        //     const output = await dbConn.callProcedurePromisified(sp, []);
+        //     return output.results;
+        // } catch(error) {
+        //     console.error(error)
+        //     return {}
+        // }
 
         // try {
         //     const xsenv = require('@sap/xsenv');
