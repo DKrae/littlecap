@@ -26,9 +26,9 @@ modules:
      buildpack: nodejs_buildpack
    requires:
     # Resources extracted from CAP configuration
+    - name: anothersample-db
     - name: littlecap-db
     - name: sampleups
-    - name: anothersample-db
    provides:
     - name: srv-api      # required by consumers of CAP services (e.g. approuter)
       properties:
