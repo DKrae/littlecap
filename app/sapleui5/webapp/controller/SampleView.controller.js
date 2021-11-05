@@ -10,6 +10,11 @@ sap.ui.define([
 		return Controller.extend("sapleui5.controller.SampleView", {
 			onInit: function () {
 
+			},
+
+			onShowHello: function (oEvent) {
+			//	console.log('test');
+				this.getView().byId("Submit").getObjectBinding().execute();
 			}
 		});
 	});

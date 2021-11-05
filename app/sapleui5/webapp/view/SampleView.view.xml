@@ -3,13 +3,28 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
+	xmlns:semantic="sap.m.semantic"
 >
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content />
-				</Page>
+				<semantic:SemanticPage id="page" title="{i18n>title}">
+					<semantic:content>
+						<Panel
+							headerText="{i18n>PanelTitle}"
+							class="sapUiResponsiveMargin"
+							width="auto">
+							<content>
+								<!--<Form id="Submit" binding="{/callStoredProc(...)}">-->
+								<Button
+									text="{i18n>showHelloButtonText}"
+									press=".onShowHello"
+									class="sapUiSmallMarginEnd"/>
+								<!--</Form>-->
+							</content>
+						</Panel>
+					</semantic:content>
+				</semantic:SemanticPage>
 			</pages>
 		</App>
 	</Shell>
