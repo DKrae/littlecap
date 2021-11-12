@@ -51,7 +51,10 @@
     "cds": {
         "requires": {
             "db": {
-                "kind": "hana"
+                "kind": "hana",
+                "vcap": {
+                    "name": "littlecap-db"
+                }
             }
         },
         "hana": {

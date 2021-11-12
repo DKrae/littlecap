@@ -16,10 +16,11 @@
 							width="auto">
 							<content>
 								<!--<Form id="Submit" binding="{/callStoredProc(...)}">-->
-								<Button
+								<Button id="btn_test"
 									text="{i18n>showHelloButtonText}"
 									press=".onShowHello"
-									class="sapUiSmallMarginEnd"/>
+									class="sapUiSmallMarginEnd"
+									binding="/callStoredProc(...)"/>
 								<!--</Form>-->
 							</content>
 						</Panel>

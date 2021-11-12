@@ -14,7 +14,9 @@ sap.ui.define([
 
 			onShowHello: function (oEvent) {
 			//	console.log('test');
-				this.getView().byId("Submit").getObjectBinding().execute();
+			//	this.getView().byId("Submit").getObjectBinding().execute();
+			this.getView().getModel().bindContext("sampleService.callStoredProc()").execute()
+			//console.log(oEvent.getSource().getBindingContext())
 			}
 		});
 	});

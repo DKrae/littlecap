@@ -16,7 +16,7 @@
         "uri": "/sample/",
         "type": "OData",
         "settings": {
-          "odataVersion": "2.0",
+          "odataVersion": "4.0",
           "localUri": "localService/metadata.xml"
         }
       }
@@ -69,7 +69,13 @@
       },
 			"": {
 				"dataSource": "mainService",
-				"preload": true
+				"preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "groupId": "$direct",
+          "synchronizationMode": "None",
+          "autoExpandSelect":true
+          }
 			}
     },
     "resources": {
